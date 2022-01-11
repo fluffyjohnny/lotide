@@ -6,4 +6,6 @@ let head = function(array) {
   }
 };
 
-
+// test code
+console.log(head([1, 2, 3]));
+console.log(head([ ]));
