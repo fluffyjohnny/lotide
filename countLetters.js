@@ -1,7 +1,7 @@
 const assertEqual = function(actual, expected) {
-  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+  if (actual !== expected) {
     console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`);
-  } else if (JSON.stringify(actual) === JSON.stringify(expected)) {
+  } else if (actual === expected) {
     console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
   }
 };
@@ -24,4 +24,5 @@ const countLetters = (strs) => {
 const string = 'hahahahHAHAHAH   ffff';
 
 console.log(countLetters('hahahahHAHAHAH   ffff'));
-assertEqual(JSON.stringify(countLetters(string)), JSON.stringify({ h: 4, a: 3, H: 4, A: 3, f: 4 }));
+assertEqual(countLetters(string).h, 4);
+assertEqual(countLetters(string).H, 4);
