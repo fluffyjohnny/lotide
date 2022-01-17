@@ -1,9 +1,15 @@
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 
-console.log(middle([1, 2, 3]));
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle(['hi', 'hello', 'hey', 'henlo']), ['hello', 'hey']);
-assertArraysEqual(middle(['hi', 'hello', 'nihao', 'hey', 'henlo']), ['nihao']);
-console.log(middle([1]));
-console.log(middle([1, 2]));
+
+describe('#middle', () => {
+  it('should return [2] for [1, 2, 3]', () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+  it('should return [\'hello\', \'hey\'] for [\'hi\', \'hello\', \'hey\', \'henlo\']', () => {
+    assert.deepEqual(middle(['hi', 'hello', 'hey', 'henlo']), ['hello', 'hey']);
+  });
+  it('should return [\'nihao\'] for [\'hi\', \'hello\', \'nihao\', \'hey\', \'henlo\']', () => {
+    assert.deepEqual(middle(['hi', 'hello', 'nihao', 'hey', 'henlo']), ['nihao']);
+  });
+});
