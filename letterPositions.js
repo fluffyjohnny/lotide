@@ -17,13 +17,5 @@ const letterPositions = function(sentence) {
 module.exports = letterPositions;
 
 
-// console.log(letterPositions('hello world'));
-
-// // c-style looping
-// // empty arrays to push
 
 
-// assertArrayEqual(letterPositions('hello').h, [0]);
-// assertArrayEqual(letterPositions('hello').e, [1]);
-// assertArrayEqual(letterPositions('hello').l, [2, 3]);
-// assertArrayEqual(letterPositions('hello').o, [4]);
