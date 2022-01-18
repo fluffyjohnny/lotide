@@ -1,17 +1,4 @@
-const eqArrays = (arr1, arr2) => {
-  for (let i = 0; i < Math.max(arr1.length, arr2.length); i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-    return true;
-  }
-};
 
-const assertArrayEqual = (actual, expected) => {
-  eqArrays(actual, expected)
-    ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`);
-};
 
 const without = (wantedArr, unwantedArr) => {
   let newArr = [];
@@ -30,7 +17,9 @@ const without = (wantedArr, unwantedArr) => {
   return newArr;
 };
 
-console.log(without([1, 2, 3, 4, 1,], [1, 2]));
-console.log(assertArrayEqual(without([1, 2, 3, 4, 1,], [1, 2]), [3, 4]));
+module.exports = without;
+
+// console.log(without([1, 2, 3, 4, 1,], [1, 2]));
+// console.log(assertArrayEqual(without([1, 2, 3, 4, 1,], [1, 2]), [3, 4]));
 
 

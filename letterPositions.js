@@ -1,19 +1,4 @@
-const eqArrays = (arr1, arr2) => {
-  for (let i = 0; i < Math.max(arr1.length, arr2.length); i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-    return true;
-  }
-};
 
-const assertArrayEqual = (actual, expected) => {
-  eqArrays(actual, expected)
-    ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`⛔ Assertion Failed: ${actual} !== ${expected}`);
-};
-
-// -------------------------------------------------------------
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -29,14 +14,16 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-
-console.log(letterPositions('hello world'));
-
-// c-style looping
-// empty arrays to push
+module.exports = letterPositions;
 
 
-assertArrayEqual(letterPositions('hello').h, [0]);
-assertArrayEqual(letterPositions('hello').e, [1]);
-assertArrayEqual(letterPositions('hello').l, [2, 3]);
-assertArrayEqual(letterPositions('hello').o, [4]);
+// console.log(letterPositions('hello world'));
+
+// // c-style looping
+// // empty arrays to push
+
+
+// assertArrayEqual(letterPositions('hello').h, [0]);
+// assertArrayEqual(letterPositions('hello').e, [1]);
+// assertArrayEqual(letterPositions('hello').l, [2, 3]);
+// assertArrayEqual(letterPositions('hello').o, [4]);

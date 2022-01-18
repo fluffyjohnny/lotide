@@ -8,4 +8,4 @@ const sumToOne = (n) => {
   return sum;
 };
 
-console.log(sumToOne(4));
+module.exports = sumToOne;
